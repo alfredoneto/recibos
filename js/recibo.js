@@ -25,14 +25,32 @@ document.getElementById("total").innerText =
 //gerarpdf
 function gerarPDF() {
   const elemento = document.getElementById("recibo");
+  const img = document.getElementById("imgAssinatura");
+
+  if (!img.complete) {
+    img.onload = () => gerarPDF();
+    return;
+  }
 
   const opt = {
-    margin: 10,
+    margin: 0,
     filename: 'recibo.pdf',
     image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2 },
-    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    html2canvas: {
+      scale: 2,
+      useCORS: true,
+      windowWidth: elemento.scrollWidth
+    },
+    jsPDF: {
+      unit: 'mm',
+      format: 'a4',
+      orientation: 'portrait'
+    },
+    pagebreak: {
+      mode: ['avoid-all', 'css', 'legacy']
+    }
   };
 
   html2pdf().set(opt).from(elemento).save();
 }
+
