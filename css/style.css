@@ -52,18 +52,22 @@ ul li {
   height: auto;
 }
 
-/* ===== RECIBO A4 ===== */
+/* ===== RECIBO PDF SAFE ===== */
 .recibo {
-  width: 210mm;
-  min-height: 297mm;
-  padding: 20mm;
+  width: 794px;        /* largura A4 em px */
+  min-height: 1123px;  /* altura A4 em px */
+  padding: 40px;
   margin: auto;
   background: white;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .recibo * {
+  box-sizing: border-box;
   page-break-inside: avoid;
 }
+
 
 .page-break {
   page-break-before: always;
