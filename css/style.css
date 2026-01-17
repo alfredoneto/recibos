@@ -9,11 +9,13 @@ body {
   padding: 20px;
 }
 
+/* Logo */
 .logo {
   max-width: 200px;
   margin-bottom: 20px;
 }
 
+/* Formulário */
 input {
   display: block;
   width: 100%;
@@ -38,6 +40,16 @@ ul li {
   padding: 5px 0;
 }
 
+/* Recibo */
+.recibo {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 .empresa p {
   margin: 3px 0;
 }
@@ -48,35 +60,22 @@ ul li {
 }
 
 .assinatura img {
-  width: 120px !important;
+  width: 120px;
   height: auto;
 }
 
-/* ===== RECIBO PDF SAFE ===== */
-.recibo {
-  width: 794px;        /* largura A4 em px */
-  min-height: 1123px;  /* altura A4 em px */
-  padding: 40px;
-  margin: auto;
-  background: white;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.recibo * {
-  box-sizing: border-box;
-  page-break-inside: avoid;
-}
-
-
-.page-break {
-  page-break-before: always;
-}
-
+/* Impressão */
 @media print {
   body {
     background: white;
     margin: 0;
+    padding: 0;
+  }
+
+  .recibo {
+    width: 100%;
+    max-width: none;
+    padding: 20mm;
   }
 
   button {
