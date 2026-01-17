@@ -10,6 +10,9 @@ function adicionarItem() {
   itens.push({ descricao, valor });
   total += valor;
 
+  document.getElementById("descricao").value = "";
+  document.getElementById("valor").value = "";
+
   renderItens();
 }
 
@@ -19,11 +22,12 @@ function renderItens() {
 
   itens.forEach(item => {
     const li = document.createElement("li");
-    li.textContent = `${item.descricao} - R$ ${item.valor.toFixed(2)}`;
+    li.textContent = `${item.descricao} — R$ ${item.valor.toFixed(2)}`;
     ul.appendChild(li);
   });
 
-  document.getElementById("total").innerText = `Total: R$ ${total.toFixed(2)}`;
+  document.getElementById("total").innerText =
+    `Total: R$ ${total.toFixed(2)}`;
 }
 
 function gerarRecibo() {
