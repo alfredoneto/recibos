@@ -1,29 +1,19 @@
-/* Reset básico */
 * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  margin: 20px;
   background: #f5f5f5;
-  color: #333;
+  margin: 0;
+  padding: 20px;
 }
 
-/* Logo */
 .logo {
   max-width: 200px;
   margin-bottom: 20px;
 }
 
-/* Títulos */
-h2 {
-  margin-top: 30px;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 5px;
-}
-
-/* Inputs */
 input {
   display: block;
   width: 100%;
@@ -32,52 +22,34 @@ input {
   margin-bottom: 10px;
 }
 
-/* Botões */
 button {
   padding: 8px 16px;
   margin-top: 10px;
   cursor: pointer;
 }
 
-/* Lista de itens */
 ul {
   list-style: none;
   padding: 0;
 }
 
 ul li {
-  background: #fff;
-  margin-bottom: 5px;
-  padding: 8px;
-  border: 1px solid #ddd;
-}
-
-/* Total */
-#total {
-  margin-top: 15px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* ===== ESTILO DO RECIBO ===== */
-@media print {
-  body {
-    background: #fff;
-  }
-
-  button {
-    display: none;
-  }
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
 }
 
 .empresa p {
   margin: 3px 0;
 }
 
+.assinatura {
+  margin-top: 40px;
+  text-align: center;
+}
+
 .assinatura img {
-  width: 120px;
+  width: 120px !important;
   height: auto;
-  margin-top: 10px;
 }
 
 /* ===== RECIBO A4 ===== */
@@ -89,19 +61,17 @@ ul li {
   background: white;
 }
 
-/* Evita cortes */
 .recibo * {
   page-break-inside: avoid;
 }
 
-/* Quebra manual se precisar */
 .page-break {
   page-break-before: always;
 }
 
-/* PDF */
 @media print {
   body {
+    background: white;
     margin: 0;
   }
 
@@ -109,5 +79,3 @@ ul li {
     display: none;
   }
 }
-
-
