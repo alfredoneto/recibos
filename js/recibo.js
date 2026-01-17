@@ -21,3 +21,18 @@ recibo.itens.forEach(item => {
 // Total
 document.getElementById("total").innerText =
   `Total: R$ ${recibo.total.toFixed(2)}`;
+
+//gerarpdf
+function gerarPDF() {
+  const elemento = document.getElementById("recibo");
+
+  const opt = {
+    margin: 10,
+    filename: 'recibo.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  };
+
+  html2pdf().set(opt).from(elemento).save();
+}
