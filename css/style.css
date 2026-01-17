@@ -82,3 +82,35 @@ ul li {
     display: none;
   }
 }
+
+/* ===== TÍTULO ===== */
+.titulo-recibo {
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin: 10px 0 30px 0;
+}
+
+/* ===== DADOS DA EMPRESA (MENORES) ===== */
+.empresa {
+  font-size: 12px;
+  color: #444;
+  text-align: center;
+}
+
+.empresa p {
+  margin: 2px 0;
+}
+
+/* ===== DADOS DO CLIENTE (DESTAQUE) ===== */
+.dados-cliente {
+  border: 2px solid #000;
+  padding: 15px;
+  margin: 20px 0;
+  font-size: 15px;
+}
+
+.dados-cliente p {
+  margin: 6px 0;
+}
+
