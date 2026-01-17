@@ -2,49 +2,32 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Recibo</title>
+  <title>Gerar Recibo</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- LOGO -->
 <img src="logo.png" class="logo">
 
-<!-- DADOS FIXOS DA EMPRESA -->
-<div class="empresa">
-  <p><strong>CNPJ:</strong> 29.568.823/0001-08</p>
-  <p><strong>Fone:</strong> (64) 99962-5561</p>
-  <p><strong>E-mail:</strong> segurancaeletronicaalcantara@gmail.com</p>
-  <p><strong>Data:</strong> <span id="dataAtual"></span></p>
-</div>
+<h2>Dados do Cliente</h2>
 
-<hr>
+<input id="clienteNome" placeholder="Nome do cliente">
+<input id="clienteEndereco" placeholder="Endereço">
+<input id="clienteDocumento" placeholder="CPF ou CNPJ">
 
-<!-- DADOS DO CLIENTE -->
-<h3>Dados do Cliente</h3>
-<p><strong>Nome:</strong> <span id="cliente"></span></p>
-<p><strong>CPF/CNPJ:</strong> <span id="documento"></span></p>
-<p><strong>Endereço:</strong> <span id="endereco"></span></p>
+<h2>Serviços / Produtos</h2>
 
-<hr>
+<input id="descricao" placeholder="Descrição">
+<input id="valor" type="number" placeholder="Valor">
 
-<!-- ITENS -->
-<h3>Serviços / Produtos</h3>
-<ul id="itens"></ul>
+<button onclick="adicionarItem()">Adicionar item</button>
 
-<h3 id="total"></h3>
+<ul id="listaItens"></ul>
 
-<hr>
+<h3 id="total">Total: R$ 0,00</h3>
 
-<!-- ASSINATURA -->
-<div class="assinatura">
-  <p>________________________________________</p>
-  <img src="assinatura.png" alt="Assinatura do Gerente">
-  <p><strong>Assinatura do Gerente</strong></p>
-</div>
+<button onclick="gerarRecibo()">Gerar Recibo</button>
 
-<button onclick="window.print()">Salvar como PDF</button>
-
-<script src="js/recibo.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
