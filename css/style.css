@@ -116,4 +116,59 @@ ul li {
 .dados-cliente p {
   margin: 6px 0;
 }
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+
+  input {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  ul li {
+    font-size: 15px;
+  }
+
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  .recibo {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .titulo-recibo {
+    font-size: 22px;
+  }
+
+  .empresa {
+    font-size: 11px;
+  }
+
+  .dados-cliente {
+    font-size: 14px;
+  }
+
+  .assinatura img {
+    width: 100px;
+  }
+
+}
 
