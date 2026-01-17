@@ -75,12 +75,8 @@ ul li {
 }
 
 .assinatura img {
-  max-width: 120px;
-  margin-top: 10px;
-}
-
-.assinatura img {
-  max-width: 200px;
+  width: 90px;
+  height: auto;
   margin-top: 10px;
 }
 
