@@ -1,47 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Recibo</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+const recibo = JSON.parse(localStorage.getItem("recibo"));
 
-<div class="recibo">
+document.getElementById("dataAtual").innerText =
+  new Date().toLocaleDateString("pt-BR");
 
-  <img src="logo.png" class="logo">
+document.getElementById("cliente").innerText = recibo.clienteNome;
+document.getElementById("documento").innerText = recibo.clienteDocumento;
+document.getElementById("endereco").innerText = recibo.clienteEndereco;
 
-  <div class="empresa">
-    <p><strong>CNPJ:</strong> 29.568.823/0001-08</p>
-    <p><strong>Fone:</strong> (64) 99962-5561</p>
-    <p><strong>E-mail:</strong> segurancaeletronicaalcantara@gmail.com</p>
-    <p><strong>Data:</strong> <span id="dataAtual"></span></p>
-  </div>
+const ul = document.getElementById("itens");
+recibo.itens.forEach(item => {
+  const li = document.createElement("li");
+  li.textContent = `${item.descricao} — R$ ${item.valor.toFixed(2)}`;
+  ul.appendChild(li);
+});
 
-  <hr>
-
-  <h3>Dados do Cliente</h3>
-  <p><strong>Nome:</strong> <span id="cliente"></span></p>
-  <p><strong>CPF/CNPJ:</strong> <span id="documento"></span></p>
-  <p><strong>Endereço:</strong> <span id="endereco"></span></p>
-
-  <hr>
-
-  <h3>Serviços / Produtos</h3>
-  <ul id="itens"></ul>
-
-  <h3 id="total"></h3>
-
-  <div class="assinatura">
-    <img src="assinatura.png">
-    <p>________________________________________</p>
-    <p><strong>Assinatura do Gerente</strong></p>
-  </div>
-
-</div>
-
-<button onclick="window.print()">Salvar como PDF</button>
-
-<script src="js/recibo.js"></script>
-</body>
-</html>
+document.getElementById("total").innerText =
+  `Total: R$ ${recibo.total.toFixed(2)}`;
