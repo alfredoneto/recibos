@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -7,51 +6,45 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="recibo">
- <!-- LOGO -->
-<img src="logo.png" class="logo">
 
-<!-- DADOS FIXOS DA EMPRESA -->
-<div class="empresa">
-  <p><strong>CNPJ:</strong> 29.568.823/0001-08</p>
-  <p><strong>Fone:</strong> (64) 99962-5561</p>
-  <p><strong>E-mail:</strong> segurancaeletronicaalcantara@gmail.com</p>
-  <p><strong>Data:</strong> <span id="dataAtual"></span></p>
-</div>
+<div id="recibo" class="recibo">
 
-<hr>
+  <img src="logo.png" class="logo">
 
-<!-- DADOS DO CLIENTE -->
-<h3>Dados do Cliente</h3>
-<p><strong>Nome:</strong> <span id="cliente"></span></p>
-<p><strong>CPF/CNPJ:</strong> <span id="documento"></span></p>
-<p><strong>Endereço:</strong> <span id="endereco"></span></p>
+  <div class="empresa">
+    <p><strong>CNPJ:</strong> 29.568.823/0001-08</p>
+    <p><strong>Fone:</strong> (64) 99962-5561</p>
+    <p><strong>E-mail:</strong> segurancaeletronicaalcantara@gmail.com</p>
+    <p><strong>Data:</strong> <span id="dataAtual"></span></p>
+  </div>
 
-<hr>
+  <hr>
 
-<!-- ITENS -->
-<h3>Serviços / Produtos</h3>
-<ul id="itens"></ul>
+  <h3>Dados do Cliente</h3>
+  <p><strong>Nome:</strong> <span id="cliente"></span></p>
+  <p><strong>CPF/CNPJ:</strong> <span id="documento"></span></p>
+  <p><strong>Endereço:</strong> <span id="endereco"></span></p>
 
-<h3 id="total"></h3>
+  <hr>
 
-<hr>
+  <h3>Serviços / Produtos</h3>
+  <ul id="itens"></ul>
 
-<!-- ASSINATURA -->
-<div class="assinatura">
-  <p><strong>Assinatura do Gerente</strong></p>
-  <img src="assinatura.png" alt="Assinatura do Gerente">
-  <p>________________________________________</p>
-  
-</div>
+  <h3 id="total"></h3>
+
+  <div class="page-break"></div>
+
+  <div class="assinatura">
+    <img src="assinatura.png" id="imgAssinatura">
+    <p>________________________________________</p>
+    <p><strong>Assinatura do Gerente</strong></p>
+  </div>
 
 </div>
-
 
 <button onclick="gerarPDF()">Salvar como PDF</button>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script src="js/recibo.js"></script>
-  
 </body>
 </html>
