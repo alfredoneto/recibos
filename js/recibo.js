@@ -1,9 +1,8 @@
 const recibo = JSON.parse(localStorage.getItem("recibo"));
 
 // Data atual
-const hoje = new Date();
 document.getElementById("dataAtual").innerText =
-  hoje.toLocaleDateString("pt-BR");
+  new Date().toLocaleDateString("pt-BR");
 
 // Dados do cliente
 document.getElementById("cliente").innerText = recibo.clienteNome;
@@ -22,7 +21,6 @@ recibo.itens.forEach(item => {
 document.getElementById("total").innerText =
   `Total: R$ ${recibo.total.toFixed(2)}`;
 
-//gerarpdf
 function gerarPDF() {
   const elemento = document.getElementById("recibo");
   const img = document.getElementById("imgAssinatura");
@@ -53,4 +51,3 @@ function gerarPDF() {
 
   html2pdf().set(opt).from(elemento).save();
 }
-
