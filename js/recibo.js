@@ -33,21 +33,22 @@ function gerarPDF() {
   const opt = {
     margin: 0,
     filename: 'recibo.pdf',
-    image: { type: 'jpeg', quality: 0.98 },
+    image: { type: 'jpeg', quality: 1 },
     html2canvas: {
-      scale: 2,
+      scale: 1,
       useCORS: true,
-      windowWidth: elemento.scrollWidth
+      backgroundColor: '#ffffff'
     },
     jsPDF: {
-      unit: 'mm',
-      format: 'a4',
+      unit: 'px',
+      format: [794, 1123],
       orientation: 'portrait'
     },
     pagebreak: {
-      mode: ['avoid-all', 'css', 'legacy']
+      mode: ['avoid-all']
     }
   };
 
   html2pdf().set(opt).from(elemento).save();
 }
+
