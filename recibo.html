@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div id="recibo" class="recibo">
+<div class="recibo">
 
   <img src="logo.png" class="logo">
 
@@ -32,19 +32,16 @@
 
   <h3 id="total"></h3>
 
-  <div class="page-break"></div>
-
   <div class="assinatura">
-    <img src="assinatura.png" id="imgAssinatura">
+    <img src="assinatura.png">
     <p>________________________________________</p>
     <p><strong>Assinatura do Gerente</strong></p>
   </div>
 
 </div>
 
-<button onclick="gerarPDF()">Salvar como PDF</button>
+<button onclick="window.print()">Salvar como PDF</button>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script src="js/recibo.js"></script>
 </body>
 </html>
