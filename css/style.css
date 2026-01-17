@@ -80,3 +80,34 @@ ul li {
   margin-top: 10px;
 }
 
+/* ===== RECIBO A4 ===== */
+.recibo {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 20mm;
+  margin: auto;
+  background: white;
+}
+
+/* Evita cortes */
+.recibo * {
+  page-break-inside: avoid;
+}
+
+/* Quebra manual se precisar */
+.page-break {
+  page-break-before: always;
+}
+
+/* PDF */
+@media print {
+  body {
+    margin: 0;
+  }
+
+  button {
+    display: none;
+  }
+}
+
+
