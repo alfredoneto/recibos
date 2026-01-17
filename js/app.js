@@ -36,8 +36,7 @@ function gerarRecibo() {
     clienteEndereco: clienteEndereco.value,
     clienteDocumento: clienteDocumento.value,
     itens,
-    total,
-    data: new Date()
+    total
   };
 
   localStorage.setItem("recibo", JSON.stringify(recibo));
