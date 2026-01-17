@@ -69,3 +69,18 @@ ul li {
     display: none;
   }
 }
+
+.empresa p {
+  margin: 3px 0;
+}
+
+.assinatura {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.assinatura img {
+  max-width: 200px;
+  margin-top: 10px;
+}
+
