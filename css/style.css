@@ -74,9 +74,9 @@ ul li {
   margin: 3px 0;
 }
 
-.assinatura {
-  margin-top: 40px;
-  text-align: center;
+.assinatura img {
+  max-width: 120px;
+  margin-top: 10px;
 }
 
 .assinatura img {
