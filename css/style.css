@@ -64,13 +64,13 @@ ul li {
 }
 
 .assinatura img {
-  width: 180px;
+  width: 200px;
   height: auto;
-  margin-bottom: 2px; /* controla distância da linha */
+  margin-bottom: 0px; /* controla distância da linha */
 }
 
 .assinatura p {
-  margin: 2px 0;
+  margin: 0;
 }
 
 
