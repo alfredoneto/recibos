@@ -64,9 +64,9 @@ ul li {
 }
 
 .assinatura img {
-  width: 120px;
+  width: 180px;
   height: auto;
-  margin-bottom: 5px; /* controla distância da linha */
+  margin-bottom: 2px; /* controla distância da linha */
 }
 
 .assinatura p {
